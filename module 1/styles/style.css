@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121214;
+    color: #e1e1e6;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #04d361;
+    letter-spacing: -0.02em;
+}
+
+p {
+    color: #a8a8b3;
+    margin-bottom: 20px;
+}
+
+/* Painel de Output (Estilo Terminal) */
+#output {
+
+    border-radius: 8px;
+    padding: 20px;
+    font-family: 'Fira Code', Consolas, Monaco, monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilização interna dos blocos de exercícios que JavaScript vai injetar */
+.bloco-exercicio {
+    background: #15151b;
+    border: 1px solid #2b2b35;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 14px;
+}
+
+.titulo-ex {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    color: #8257e5;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.conteudo-exercicio {
+    margin-top: 10px;
+}
+
+.descricao-ex {
+    margin-bottom: 12px;
+}
+
+.controles-exercicio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.campo-numerico {
+    min-width: 100px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #29292e;
+    background: #121214;
+    color: #fff;
+}
+
+.campo-numerico:focus {
+    outline: none;
+    border-color: #04d361;
+}
+
+.botao-exercicio {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    background: #04d361;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-exercicio:hover {
+    filter: brightness(0.9);
+}
+
+.resultado-exercicio {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.resultado-exercicio.sucesso {
+    color: #04d361;
+}
+
+.resultado-exercicio.erro {
+    color: #ff5555;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .titulo-ex {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .descricao-ex {
+        text-align: justify;
+    }
+
+    .controles-exercicio {
+        flex-direction: column;
+    }
+
+    .campo-numerico,
+    .botao-exercicio {
+        width: 50%;
+    }
+}
