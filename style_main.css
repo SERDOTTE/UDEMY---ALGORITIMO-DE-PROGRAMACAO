@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121214;
+    color: #e1e1e6;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #04d361;
+    letter-spacing: -0.02em;
+}
+
+ol {
+    list-style: none; /* Remove os números padrão para podermos estilizar como blocos */
+    padding: 0;
+    max-width: 500px; /* Limita a largura máxima dos retângulos */
+    margin: 20px auto;
+}
+
+/* Transforma cada LI em um retângulo arredondado */
+li {
+    background-color: #191920; /* Fundo escuro igual ao do terminal anterior */
+    color: #e1e1e6;
+    margin-bottom: 12px; /* Espaço entre os retângulos */
+    padding: 15px 20px; /* Espaço interno para dar o formato de bloco */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 1px solid #29292e; /* Borda sutil */
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: transform 0.2s, background-color 0.2s; /* Efeito suave ao passar o mouse */
+}
+
+/* Estilo específico para o item que tem o link (Módulo 1) */
+li.clicavel {
+    padding: 0; /* Remove o padding do LI para o link ocupar 100% do espaço */
+    cursor: pointer;
+    border-color: #04d361; /* Destaca a borda do módulo ativo em verde */
+}
+
+/* Estilização do link para ocupar todo o espaço do retângulo */
+li.clicavel a {
+    display: block;
+    color: #04d361; /* Texto em verde para indicar que está ativo */
+    text-decoration: none; /* Remove o sublinhado padrão de link */
+    padding: 15px 20px; /* Aplica o padding por dentro do link */
+    border-radius: 8px;
+}
+
+/* Efeito visual quando o usuário passa o mouse por cima do Módulo clicável */
+li.clicavel:hover {
+    background-color: #202026;
+    transform: scale(1.02); /* Dá um leve "zoom" ao passar o mouse */
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}

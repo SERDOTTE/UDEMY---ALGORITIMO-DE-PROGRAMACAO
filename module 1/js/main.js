@@ -2,6 +2,10 @@ import { renderizarTodosExercicios } from './exercicios/index.mjs';
 
 const outputDiv = document.getElementById('output');
 
+document.getElementById('botao_voltar').addEventListener('click', () => {
+    window.location.href = '../index.html';
+});
+
 function criarBlocoExercicio(titulo) {
     const bloco = document.createElement('section');
     bloco.className = 'bloco-exercicio';
